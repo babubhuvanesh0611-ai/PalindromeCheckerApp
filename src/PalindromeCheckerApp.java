@@ -1,5 +1,33 @@
-public class PalindromeCheckerApp {
+import java.util.Scanner;
+
+public class UseCase3PalindromeCheckerApp {
+
     public static void main(String[] args) {
-        System.out.println("Hello PalindromeCheckerApp");
+
+        Scanner sc = new Scanner(System.in);
+
+        
+        System.out.print("Enter a string: ");
+        String original = sc.nextLine();
+
+        
+        String reversed = "";
+
+       
+        for (int i = original.length() - 1; i >= 0; i--) {
+            reversed = reversed + original.charAt(i);
+        }
+
+        
+        System.out.println("Reversed string: " + reversed);
+
+        
+        if (original.equals(reversed)) {
+            System.out.println("The given string is a Palindrome.");
+        } else {
+            System.out.println("The given string is NOT a Palindrome.");
+        }
+
+        sc.close();
     }
 }
